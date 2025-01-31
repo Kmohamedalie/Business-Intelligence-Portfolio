@@ -36,3 +36,25 @@ img {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   background-color: #f0f0f0; /* Light gray background on hover */
 }
+
+/* Social media links */
+.social-buttons .btn {
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.social-buttons .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-buttons .btn i {
+  font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+  .social-buttons .btn {
+    margin-bottom: 10px;
+  }
+}
