@@ -1,24 +1,70 @@
+/* Responsive Full Background Image Using CSS
+*/
 body {
-  background-color: #222; /* Dark gray */
+  /* Location of the image */
+  background-image: url(./images/bi-large.jpg);
+
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+
+  /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color: #464646;
+
+  /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
 }
 
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+    background-image: url(./images/bi-small.jpg);
+  }
+}
+
+/*main header*/
 h1 {
   color: white;
+
+  background-color: black; /* Light gray */
+  border-radius: 10px; /* Adjust the radius value */
   font-weight: bold;
   text-align: center;
+  padding: 10px; /* Optional: Add padding for better visual appearance */
 }
 
 h4 {
   color: skyblue;
   text-align: center;
+  font-weight: bold;
+  background-color: black;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center; /* Vertically center text */
+  justify-content: center; /* Horizontally center text */
+  padding: 5px 10px;
 }
 
-img {
-  border: 1px solid rgb(184, 182, 182);
+.h4_align {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
 }
 
 .card {
-  background: #fff;
+  background: whitesmoke;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
     0.3s box-shadow,
@@ -57,4 +103,15 @@ img {
   .social-buttons .btn {
     margin-bottom: 10px;
   }
+}
+
+/* video as background*/
+video {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
 }
